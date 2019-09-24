@@ -22,7 +22,7 @@ const char FWUPDATE_URI[] PROGMEM = "/fwupdate";
 class BaseWebServer {
 public:
   BaseWebServer(const BaseConfig *config) : _config((BaseConfig*)config), _http(NULL) {}
-  ~BaseWebServer() {
+  virtual ~BaseWebServer() {
     if (_http)
       delete[] _http;
   }
