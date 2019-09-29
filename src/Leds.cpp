@@ -83,7 +83,7 @@ void Led::update(bool force) {
 
 void Led::delay(uint32_t ms) {
   if (_item.mode < LED_1HZ)
-    delay(ms);
+    ::delay(ms);
   else {
     while (ms--) {
       update();
